@@ -13,21 +13,27 @@ Daily consumption is expressed in kWh. Half-hourly usage is expressed as the ave
 # Usage
 
 Create an object by passing username (email) and password to the constructor:
+````
     LinkyHandler linky = new LinkyHandler("user@domain.com", "password123");
+````
 
 Login:
+````
     if (linky.Login() == LoginResult.OK)
     {
         // Login OK
     }
+````
 
 Get data:
+````
     LinkyData lastWeek = linky.GetDailyData(DateTime.Now.AddDays(-8), DateTime.Now.AddDays(-1));
     if (lastWeek.Status == DataResult.OK)
     {
         // Data OK
     }
-    
+````
+
 # Repo contents
 
 The project LinkyDotNet contains the LinkyHandler class as well as several data-containers (in LinkyDataResponse.cs). Most of the data-containers are intermediate steps, modeled after the format of the JSON-output of the website. The final results are stored in the LinkyData class.
