@@ -1,3 +1,5 @@
+# NOTE: This project is outdated because Enedis changed its website & has included a captcha.
+
 # LinkyDotNet
 
 This repository introduces a class to interact with a user account on the website of Enedis, the manager of the French electrical grid, for the purposes of retrieving data collected by Linky, the connected power meter.
